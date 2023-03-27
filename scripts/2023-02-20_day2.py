@@ -2,8 +2,8 @@ import piplates.DAQC2plate as DAQC2  # As per https://pi-plates.com/daqc2-users-
 import piplates.DAQCplate as DAQC    # Apropriated from above
 import time
 
-DAQC2.DAQC2version
-DAQC2.daqc2sPresent
+print("DAQC2 version : ", DAQC2.DAQC2version)
+print("DAQC2's present: ", DAQC2.daqc2sPresent)
 
 import numpy as np  # For linspace to make sweep, and to make and save arrays
 import os  # To get directory capabilities
