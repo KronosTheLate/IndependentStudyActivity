@@ -82,6 +82,7 @@ end
 
 function set_and_meas()
     v_targets = range(0, 4, length=50)
+    v_targets = [v_targets; 0]
     output = (v_set = Float32[], v_mes = Float32[])
     for v_target in v_targets
         DAQC2.setDAC(0, 0, v_target)
@@ -98,5 +99,5 @@ end
 
 begin
     output = set_and_meas()
-    CSV.write(datadir * "test.csv", output)
+    CSV.write(joinpath(datadir, "buffer_follower_7_5k_Ohm_andDiode.csv"), output)
 end
